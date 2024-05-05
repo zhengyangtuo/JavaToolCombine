@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>Dubbo3Project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>Dubbo-pojo</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <!--下面坐标根据自己使用的SpringBoot版本二选一-->
+            <!--SpringBoot2使用此版本-->
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <!--            &lt;!&ndash;3.5.4开始,支持SpringBoot3使用此版本&ndash;&gt;-->
+            <!--            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+    </dependencies>
+</project>
