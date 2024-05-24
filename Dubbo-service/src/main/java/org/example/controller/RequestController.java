@@ -1,14 +1,8 @@
 package org.example.controller;
 
-import org.apache.dubbo.config.annotation.DubboReference;
-import org.example.UserService;
-import org.example.constant.ReturnCode;
-import org.example.exception.BussinessException;
-import org.example.pojo.ResultType;
-import org.example.pojo.User;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")

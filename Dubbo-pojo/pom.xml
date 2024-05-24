@@ -15,21 +15,36 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>2.6.13</spring.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <!--下面坐标根据自己使用的SpringBoot版本二选一-->
-            <!--SpringBoot2使用此版本-->
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <!--            &lt;!&ndash;3.5.4开始,支持SpringBoot3使用此版本&ndash;&gt;-->
-            <!--            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
-            <version>3.3.1</version>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <version>2.1.5.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jackson-core</artifactId>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>joda-time</artifactId>
+                    <groupId>joda-time</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-api</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>snakeyaml</artifactId>
+                    <groupId>org.yaml</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>

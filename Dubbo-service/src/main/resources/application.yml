@@ -1,12 +1,17 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    url: jdbc:mysql://node0:3306/greatecommunity?useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 123456
+    password: root
   application:
     name: dubbo-samples-provider-springCloud
-
+  redis:
+    database: 11
+    host: node0
+    port: 6379
+  main:
+    allow-bean-definition-overriding: true
 server:
   port: 8091
 
@@ -15,7 +20,7 @@ dubbo:
     name: ${spring.application.name}
     qosPort: 22222
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://node0:2181
     timeout: 5000
   protocol:
     name: dubbo
@@ -23,3 +28,7 @@ dubbo:
   # 扫描 @DubboService 注解
   scan:
     base-packages: org.example.service
+# slf4j日志配置
+logging:
+  level:
+    root: info

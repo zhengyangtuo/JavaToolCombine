@@ -10,7 +10,7 @@ dubbo:
     name: ${spring.application.name}
     qosPort: 33333
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://node0:2181
     timeout: 5000
   protocol:
     name: dubbo
